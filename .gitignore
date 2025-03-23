@@ -1,0 +1,46 @@
+# 忽略 node_modules 目录
+node_modules/
+
+# 忽略日志文件
+*.log
+
+# 忽略调试文件
+*.pid
+*.seed
+
+# 忽略环境变量文件
+.env
+.env.local
+.env.*.local
+
+# 忽略构建目录
+dist/
+build/
+out/
+
+# 忽略缓存目录
+.cache/
+
+# 忽略操作系统生成的文件
+.DS_Store
+Thumbs.db
+
+# 忽略 IDE 配置文件
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 忽略 npm 和 yarn 的锁文件
+package-lock.json
+yarn.lock
+
+# 忽略测试生成的覆盖率目录
+coverage/
+
+# 忽略临时文件
+*.tmp
+*.temp
