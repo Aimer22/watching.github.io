@@ -8,31 +8,77 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
+            background-color: #fff;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #fb7299;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px rgba(251,114,153,0.2);
         }
         #videoUrlInput {
-            width: 60%;
-            padding: 10px;
+            width: 300px;
+            padding: 12px 20px;
             font-size: 16px;
-            margin-bottom: 10px;
+            border: 2px solid #fb7299;
+            border-radius: 8px;
+            outline: none;
+            transition: all 0.3s ease;
+            height: 45px;
+            box-sizing: border-box;
+        }
+        #videoUrlInput:focus {
+            border-color: #00AEEC;
+            box-shadow: 0 0 8px rgba(0,174,236,0.3);
         }
         #setVideoUrlButton {
-            padding: 10px 20px;
+            padding: 0 35px;
             font-size: 16px;
+            background-color: #fb7299;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+            height: 45px;
+            line-height: 45px;
+            white-space: nowrap;
+        }
+        #setVideoUrlButton:hover {
+            background-color: #00AEEC;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,174,236,0.2);
         }
         iframe {
-            width: 80%;
-            height: 400px;
-            margin-top: 20px;
+            width: 90%;
+            height: 600px;
+            margin-top: 40px;
             border: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(251,114,153,0.15);
+        }
+        .input-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 0 20px;
+            flex-wrap: wrap;
         }
     </style>
 </head>
 <body>
-    <h1>实时同步 B站视频</h1>
-    <input type="text" id="videoUrlInput" placeholder="输入 B站视频链接（例如：BV18ZPgeUE19）">
-    <button id="setVideoUrlButton">设置并同步</button>
-    <br>
+    <h1>小帅和小玉的影院</h1>
+    <div class="input-container">
+        <input type="text" id="videoUrlInput" placeholder="输入 B站视频链接（例如：BV18ZPgeUE19）">
+        <button id="setVideoUrlButton">设置并同步</button>
+    </div>
     <iframe id="bilibiliVideo" allowfullscreen></iframe>
 
     <script src="app.js"></script>
